@@ -1,0 +1,494 @@
+[
+  {
+    "claim_file": "crash1_structured.json",
+    "policy_match": {
+      "policy_number": "LIAB-AUTO-001",
+      "policy_name": "Liability Only Auto Insurance",
+      "policy_type": "liability_only",
+      "match_confidence": "high"
+    },
+    "coverage_determination": {
+      "decision": "DENIED",
+      "applicable_coverage": "None",
+      "deductible": "N/A",
+      "coverage_limit": "N/A",
+      "reasoning": "The policy is a liability-only auto insurance policy that explicitly does not cover collision damage to the policyholder's own vehicle. The claim involves damage to John Peterson's own 2004 Honda Accord caused by another vehicle while parked. According to the policy coverage summary, 'covers_own_vehicle_collision' is false and the key exclusions include 'Collision damage to your vehicle'. Therefore, this claim for repair expenses to the policyholder's own vehicle is not covered under this policy.",
+      "exclusions_triggered": [
+        "Collision damage to your vehicle"
+      ],
+      "recommendations": "Inform the claimant that their liability-only policy does not cover damage to their own vehicle. Recommend they review their policy options for collision or comprehensive coverage if they want protection for their own vehicle damage in the future. Consider filing a claim with the at-fault driver's insurance for property damage liability coverage."
+    },
+    "full_policy_result": {
+      "policy_match": {
+        "policy_number": "LIAB-AUTO-001",
+        "policy_name": "Liability Only Auto Insurance",
+        "policy_type": "liability_only",
+        "match_confidence": "high"
+      },
+      "coverage_summary": {
+        "covers_own_vehicle_collision": false,
+        "covers_own_vehicle_comprehensive": false,
+        "covers_liability_bodily_injury": true,
+        "covers_liability_property_damage": true,
+        "covers_medical_payments": false,
+        "covers_uninsured_motorist": false,
+        "covers_rental_car": false,
+        "covers_roadside_assistance": false,
+        "covers_towing": false
+      },
+      "limits": {
+        "collision_limit": "N/A",
+        "comprehensive_limit": "N/A",
+        "bodily_injury_per_person": "$25,000",
+        "bodily_injury_per_accident": "$50,000",
+        "property_damage_per_accident": "$25,000",
+        "medical_payments_per_person": "N/A"
+      },
+      "deductibles": {
+        "collision_deductible": "N/A",
+        "comprehensive_deductible": "N/A"
+      },
+      "key_exclusions": [
+        "Collision damage to your vehicle",
+        "Comprehensive damage (theft, vandalism, weather)",
+        "Medical expenses for you or your passengers",
+        "Damage while racing or in competitions",
+        "Intentional damage caused by you",
+        "Damage while using vehicle for business purposes",
+        "Damage while driving under the influence"
+      ],
+      "own_vehicle_damage_covered": false,
+      "notes": "Liability-only policy: covers only damage/injury you cause to OTHERS. Does NOT cover any damage to the policyholder's own vehicle.",
+      "status": "success",
+      "source": "fallback_mapping",
+      "timestamp": "2026-03-27T00:17:21.190475"
+    },
+    "full_validation_result": {
+      "coverage_decision": "DENIED",
+      "policy_type": "Liability Only Auto Insurance",
+      "policy_number": "LIAB-AUTO-001",
+      "applicable_coverage": "None",
+      "deductible": "N/A",
+      "coverage_limit": "N/A",
+      "reasoning": "The policy is a liability-only auto insurance policy that explicitly does not cover collision damage to the policyholder's own vehicle. The claim involves damage to John Peterson's own 2004 Honda Accord caused by another vehicle while parked. According to the policy coverage summary, 'covers_own_vehicle_collision' is false and the key exclusions include 'Collision damage to your vehicle'. Therefore, this claim for repair expenses to the policyholder's own vehicle is not covered under this policy.",
+      "exclusions_checked": [
+        "Collision damage to your vehicle",
+        "Comprehensive damage (theft, vandalism, weather)",
+        "Damage while racing or in competitions",
+        "Intentional damage caused by you",
+        "Damage while using vehicle for business purposes",
+        "Damage while driving under the influence"
+      ],
+      "exclusions_triggered": [
+        "Collision damage to your vehicle"
+      ],
+      "recommendations": "Inform the claimant that their liability-only policy does not cover damage to their own vehicle. Recommend they review their policy options for collision or comprehensive coverage if they want protection for their own vehicle damage in the future. Consider filing a claim with the at-fault driver's insurance for property damage liability coverage.",
+      "confidence": "high",
+      "status": "success",
+      "timestamp": "2026-03-27T00:17:30.220971",
+      "claim_summary": {
+        "policy_number": "LIAB-AUTO-001",
+        "policy_holder_name": "John Peterson",
+        "vehicle_year_make_model": "2004 Honda Accord",
+        "vehicle_color": "Silver",
+        "vehicle_vin": "1HGCM56404A123456",
+        "incident_date": "July 17, 2025",
+        "incident_time": "8:30 AM",
+        "incident_location": "Parking lot, 2325 Main Street, Springfield, OH 45503",
+        "incident_description": "Vehicle legally parked in marked space. Gray pickup truck attempting to park beside struck the front end and driver's side of vehicle causing significant damage. Other driver left information and waited for police.",
+        "damage_description": "Front bumper dislodged and partially detached; severe denting and scraping on driver's side front quarter panel; wheel and tire on driver's side front damaged; paint transfer and deformity on the driver's door; headlamp assembly and grille potentially damaged; possible hidden damage to mechanical components behind the bumper",
+        "claim_request": "Full coverage of repair expenses minus deductible"
+      }
+    },
+    "workflow_timestamp": "2026-03-27T00:17:30.221840"
+  },
+  {
+    "claim_file": "crash2_structured.json",
+    "policy_match": {
+      "policy_number": "COMM-AUTO-001",
+      "policy_name": "Commercial Auto Insurance",
+      "policy_type": "commercial",
+      "match_confidence": "high"
+    },
+    "coverage_determination": {
+      "decision": "APPROVED",
+      "applicable_coverage": "Own Vehicle Collision Coverage",
+      "deductible": "$500",
+      "coverage_limit": "$50,000 per incident",
+      "reasoning": "The claim involves collision damage to the policyholder's own vehicle caused by another driver who admitted fault. The policy explicitly covers own vehicle collision damage under the Commercial Auto Insurance policy, with a collision limit of $50,000 and a $500 deductible. There are no exclusions triggered such as racing, DUI, or intentional damage. The incident occurred during business operations, consistent with the commercial nature of the policy. Therefore, the claim is approved under the own vehicle collision coverage section.",
+      "exclusions_triggered": [],
+      "recommendations": "Proceed with damage assessment and repair estimates. Verify that total repair costs do not exceed the $50,000 collision coverage limit. Confirm that the deductible of $500 applies to the claim payout."
+    },
+    "full_policy_result": {
+      "policy_match": {
+        "policy_number": "COMM-AUTO-001",
+        "policy_name": "Commercial Auto Insurance",
+        "policy_type": "commercial",
+        "match_confidence": "high"
+      },
+      "coverage_summary": {
+        "covers_own_vehicle_collision": true,
+        "covers_own_vehicle_comprehensive": true,
+        "covers_liability_bodily_injury": true,
+        "covers_liability_property_damage": true,
+        "covers_medical_payments": true,
+        "covers_uninsured_motorist": true,
+        "covers_rental_car": false,
+        "covers_roadside_assistance": false,
+        "covers_towing": true
+      },
+      "limits": {
+        "collision_limit": "$50,000 per incident",
+        "comprehensive_limit": "$50,000 per incident",
+        "bodily_injury_per_person": "$100,000",
+        "bodily_injury_per_accident": "$300,000",
+        "property_damage_per_accident": "$100,000",
+        "medical_payments_per_person": "$10,000"
+      },
+      "deductibles": {
+        "collision_deductible": "$500",
+        "comprehensive_deductible": "$250"
+      },
+      "key_exclusions": [
+        "Racing or competitive driving events",
+        "Personal use outside business operations",
+        "Intentional damage",
+        "Damage while driving under the influence"
+      ],
+      "own_vehicle_damage_covered": true,
+      "notes": "Commercial auto policy with collision and comprehensive coverage for business vehicles.",
+      "status": "success",
+      "source": "fallback_mapping",
+      "timestamp": "2026-03-27T00:17:31.554764"
+    },
+    "full_validation_result": {
+      "coverage_decision": "APPROVED",
+      "policy_type": "Commercial Auto Insurance",
+      "policy_number": "COMM-AUTO-001",
+      "applicable_coverage": "Own Vehicle Collision Coverage",
+      "deductible": "$500",
+      "coverage_limit": "$50,000 per incident",
+      "reasoning": "The claim involves collision damage to the policyholder's own vehicle caused by another driver who admitted fault. The policy explicitly covers own vehicle collision damage under the Commercial Auto Insurance policy, with a collision limit of $50,000 and a $500 deductible. There are no exclusions triggered such as racing, DUI, or intentional damage. The incident occurred during business operations, consistent with the commercial nature of the policy. Therefore, the claim is approved under the own vehicle collision coverage section.",
+      "exclusions_checked": [
+        "Racing or competitive driving events",
+        "Personal use outside business operations",
+        "Intentional damage",
+        "Damage while driving under the influence"
+      ],
+      "exclusions_triggered": [],
+      "recommendations": "Proceed with damage assessment and repair estimates. Verify that total repair costs do not exceed the $50,000 collision coverage limit. Confirm that the deductible of $500 applies to the claim payout.",
+      "confidence": "high",
+      "status": "success",
+      "timestamp": "2026-03-27T00:17:38.364194",
+      "claim_summary": {
+        "policy_number": "COMM-AUTO-001",
+        "policy_holder_name": "Samantha Turner",
+        "vehicle_year_make_model": "2017 Honda Civic Hatchback",
+        "vehicle_color": "Blue-Gray",
+        "vehicle_vin": "19XFC2F5XHE200487",
+        "incident_date": "July 18, 2025",
+        "incident_time": "4:10 PM",
+        "incident_location": "2100 Madison Avenue, Albany, NY 12208",
+        "incident_description": "Driving eastbound through green light when another vehicle traveling southbound failed to stop at red signal and struck vehicle on driver's side. Car spun partially before stopping near curb. Other driver admitted fault to police.",
+        "damage_description": "Heavy intrusion and bending on driver's front and rear doors; B-pillar area severely compromised; rear wheel misaligned, not functional for safe driving; shattered rear driver's side window; scraping and paint transfer along both driver's side doors and lower panels; deployment of side airbags; possible interior damage to armrests and door controls; vehicle towed from accident location",
+        "claim_request": "Assessment and full coverage for extensive body and structural repairs"
+      }
+    },
+    "workflow_timestamp": "2026-03-27T00:17:38.364246"
+  },
+  {
+    "claim_file": "crash3_structured.json",
+    "policy_match": {
+      "policy_number": "LIAB-AUTO-001",
+      "policy_name": "Liability Only Auto Insurance",
+      "policy_type": "liability_only",
+      "match_confidence": "high"
+    },
+    "coverage_determination": {
+      "decision": "DENIED",
+      "applicable_coverage": "None",
+      "deductible": "N/A",
+      "coverage_limit": "N/A",
+      "reasoning": "The policy is a liability-only auto insurance which explicitly does not cover collision damage to the policyholder's own vehicle. The claim involves damage to Michael Rodriguez's own 2012 Suzuki SX4 from a collision, which is excluded under the policy's key exclusions section 'Collision damage to your vehicle'. Therefore, no coverage applies for the requested repairs to the rear quarter panel, front bumper, and suspension.",
+      "exclusions_triggered": [
+        "Collision damage to your vehicle"
+      ],
+      "recommendations": "Inform the claimant that their liability-only policy does not cover damage to their own vehicle. Recommend obtaining collision coverage in future policies to cover such damages. Consider pursuing a claim against the at-fault driver\u2019s insurance for property damage liability coverage."
+    },
+    "full_policy_result": {
+      "policy_match": {
+        "policy_number": "LIAB-AUTO-001",
+        "policy_name": "Liability Only Auto Insurance",
+        "policy_type": "liability_only",
+        "match_confidence": "high"
+      },
+      "coverage_summary": {
+        "covers_own_vehicle_collision": false,
+        "covers_own_vehicle_comprehensive": false,
+        "covers_liability_bodily_injury": true,
+        "covers_liability_property_damage": true,
+        "covers_medical_payments": false,
+        "covers_uninsured_motorist": false,
+        "covers_rental_car": false,
+        "covers_roadside_assistance": false,
+        "covers_towing": false
+      },
+      "limits": {
+        "collision_limit": "N/A",
+        "comprehensive_limit": "N/A",
+        "bodily_injury_per_person": "$25,000",
+        "bodily_injury_per_accident": "$50,000",
+        "property_damage_per_accident": "$25,000",
+        "medical_payments_per_person": "N/A"
+      },
+      "deductibles": {
+        "collision_deductible": "N/A",
+        "comprehensive_deductible": "N/A"
+      },
+      "key_exclusions": [
+        "Collision damage to your vehicle",
+        "Comprehensive damage (theft, vandalism, weather)",
+        "Medical expenses for you or your passengers",
+        "Damage while racing or in competitions",
+        "Intentional damage caused by you",
+        "Damage while using vehicle for business purposes",
+        "Damage while driving under the influence"
+      ],
+      "own_vehicle_damage_covered": false,
+      "notes": "Liability-only policy: covers only damage/injury you cause to OTHERS. Does NOT cover any damage to the policyholder's own vehicle.",
+      "status": "success",
+      "source": "fallback_mapping",
+      "timestamp": "2026-03-27T00:17:39.657140"
+    },
+    "full_validation_result": {
+      "coverage_decision": "DENIED",
+      "policy_type": "Liability Only Auto Insurance",
+      "policy_number": "LIAB-AUTO-001",
+      "applicable_coverage": "None",
+      "deductible": "N/A",
+      "coverage_limit": "N/A",
+      "reasoning": "The policy is a liability-only auto insurance which explicitly does not cover collision damage to the policyholder's own vehicle. The claim involves damage to Michael Rodriguez's own 2012 Suzuki SX4 from a collision, which is excluded under the policy's key exclusions section 'Collision damage to your vehicle'. Therefore, no coverage applies for the requested repairs to the rear quarter panel, front bumper, and suspension.",
+      "exclusions_checked": [
+        "Collision damage to your vehicle",
+        "Comprehensive damage (theft, vandalism, weather)",
+        "Medical expenses for you or your passengers",
+        "Damage while racing or in competitions",
+        "Intentional damage caused by you",
+        "Damage while using vehicle for business purposes",
+        "Damage while driving under the influence"
+      ],
+      "exclusions_triggered": [
+        "Collision damage to your vehicle"
+      ],
+      "recommendations": "Inform the claimant that their liability-only policy does not cover damage to their own vehicle. Recommend obtaining collision coverage in future policies to cover such damages. Consider pursuing a claim against the at-fault driver\u2019s insurance for property damage liability coverage.",
+      "confidence": "high",
+      "status": "success",
+      "timestamp": "2026-03-27T00:17:47.083249",
+      "claim_summary": {
+        "policy_number": "LIAB-AUTO-001",
+        "policy_holder_name": "Michael Rodriguez",
+        "vehicle_year_make_model": "2012 Suzuki SX4",
+        "vehicle_color": "White",
+        "vehicle_vin": "JS2YB5A31C6109734",
+        "incident_date": "July 19, 2025",
+        "incident_time": "6:30 PM",
+        "incident_location": "400 East 8th Street, Harrisburg, PA 17102",
+        "incident_description": "Operating vehicle eastbound on East 8th Street, slowed to make left turn into residential driveway. Another vehicle traveling at excessive speed attempted to overtake on left and collided forcefully with rear driver's side quarter panel. Impact caused car to spin and strike nearby curb, resulting in further damage to front bumper and left front wheel. At-fault driver admitted fault to responding police officer.",
+        "damage_description": "Major denting and scraping to rear driver's side quarter panel and bumper; damage to rear wheel arch; front bumper heavily crumpled and partially detached due to secondary curb impact; left front wheel and suspension suspected damaged; minor scraping to front left headlight housing; vehicle determined not drivable and towed for repair assessment",
+        "claim_request": "Full assessment and repair of all damage to rear quarter panel, front bumper, and suspension",
+        "weather_conditions": "Partly cloudy, roads dry"
+      }
+    },
+    "workflow_timestamp": "2026-03-27T00:17:47.083287"
+  },
+  {
+    "claim_file": "crash4_structured.json",
+    "policy_match": {
+      "policy_number": "COMM-AUTO-001",
+      "policy_name": "Commercial Auto Insurance",
+      "policy_type": "commercial",
+      "match_confidence": "high"
+    },
+    "coverage_determination": {
+      "decision": "APPROVED",
+      "applicable_coverage": "Own Vehicle Collision Coverage and Towing Coverage",
+      "deductible": "$500",
+      "coverage_limit": "$50,000 per incident",
+      "reasoning": "The claim involves rear-end collision damage to the policyholder's own vehicle, which is explicitly covered under the policy's collision coverage section. The policy includes collision coverage for own vehicle damage with a $500 deductible and a $50,000 per incident limit. The towing costs are also covered as the policy includes towing coverage. No exclusions such as racing, DUI, intentional damage, or personal use outside business operations apply to this incident, which occurred during normal business use. Therefore, the claim is approved under the collision and towing coverage sections.",
+      "exclusions_triggered": [],
+      "recommendations": "Proceed with damage assessment and repair authorization up to the coverage limits. Verify final repair estimates to ensure they do not exceed the $50,000 collision limit. Confirm towing costs and include them in the claim settlement."
+    },
+    "full_policy_result": {
+      "policy_match": {
+        "policy_number": "COMM-AUTO-001",
+        "policy_name": "Commercial Auto Insurance",
+        "policy_type": "commercial",
+        "match_confidence": "high"
+      },
+      "coverage_summary": {
+        "covers_own_vehicle_collision": true,
+        "covers_own_vehicle_comprehensive": true,
+        "covers_liability_bodily_injury": true,
+        "covers_liability_property_damage": true,
+        "covers_medical_payments": true,
+        "covers_uninsured_motorist": true,
+        "covers_rental_car": false,
+        "covers_roadside_assistance": false,
+        "covers_towing": true
+      },
+      "limits": {
+        "collision_limit": "$50,000 per incident",
+        "comprehensive_limit": "$50,000 per incident",
+        "bodily_injury_per_person": "$100,000",
+        "bodily_injury_per_accident": "$300,000",
+        "property_damage_per_accident": "$100,000",
+        "medical_payments_per_person": "$10,000"
+      },
+      "deductibles": {
+        "collision_deductible": "$500",
+        "comprehensive_deductible": "$250"
+      },
+      "key_exclusions": [
+        "Racing or competitive driving events",
+        "Personal use outside business operations",
+        "Intentional damage",
+        "Damage while driving under the influence"
+      ],
+      "own_vehicle_damage_covered": true,
+      "notes": "Commercial auto policy with collision and comprehensive coverage for business vehicles.",
+      "status": "success",
+      "source": "fallback_mapping",
+      "timestamp": "2026-03-27T00:17:48.413226"
+    },
+    "full_validation_result": {
+      "coverage_decision": "APPROVED",
+      "policy_type": "Commercial Auto Insurance",
+      "policy_number": "COMM-AUTO-001",
+      "applicable_coverage": "Own Vehicle Collision Coverage and Towing Coverage",
+      "deductible": "$500",
+      "coverage_limit": "$50,000 per incident",
+      "reasoning": "The claim involves rear-end collision damage to the policyholder's own vehicle, which is explicitly covered under the policy's collision coverage section. The policy includes collision coverage for own vehicle damage with a $500 deductible and a $50,000 per incident limit. The towing costs are also covered as the policy includes towing coverage. No exclusions such as racing, DUI, intentional damage, or personal use outside business operations apply to this incident, which occurred during normal business use. Therefore, the claim is approved under the collision and towing coverage sections.",
+      "exclusions_checked": [
+        "Racing or competitive driving events",
+        "Personal use outside business operations",
+        "Intentional damage",
+        "Damage while driving under the influence"
+      ],
+      "exclusions_triggered": [],
+      "recommendations": "Proceed with damage assessment and repair authorization up to the coverage limits. Verify final repair estimates to ensure they do not exceed the $50,000 collision limit. Confirm towing costs and include them in the claim settlement.",
+      "confidence": "high",
+      "status": "success",
+      "timestamp": "2026-03-27T00:17:55.471823",
+      "claim_summary": {
+        "policy_number": "COMM-AUTO-001",
+        "policy_holder_name": "Andrea M. Bennett",
+        "vehicle_year_make_model": "2011 Subaru Outback",
+        "vehicle_color": "Red",
+        "vehicle_vin": "4S4BRBCC2B3378210",
+        "incident_date": "July 19, 2025",
+        "incident_time": "11:15 AM",
+        "incident_location": "6400 Westbrook Road, Dayton, OH 45415",
+        "incident_description": "Driving westbound on Westbrook Road, waiting in line with traffic for stop sign. Vehicle was rear-ended by blue sedan at moderate speed. Impact pushed vehicle into adjacent lane and forced front end into left lane's shoulder. Other driver remained at scene and called local authorities.",
+        "damage_description": "Severe crumpling and structural damage to rear bumper and rear quarter panel; rear driver's side taillight broken and assembly displaced; rear hatch door bent and misaligned, unable to close properly; noticeable damage and scraping to rear fender and left rear wheel well; suspension may be compromised; rear wheel does not track properly; minor paint scrapes and denting along driver's side; trunk contents disturbed, possible interior damage",
+        "claim_request": "Assessment and coverage for all rear-end bodywork and mechanical repairs, plus reimbursement for towing costs",
+        "weather_conditions": "Clear, dry roads"
+      }
+    },
+    "workflow_timestamp": "2026-03-27T00:17:55.471859"
+  },
+  {
+    "claim_file": "crash5_structured.json",
+    "policy_match": {
+      "policy_number": "COMM-AUTO-001",
+      "policy_name": "Commercial Auto Insurance",
+      "policy_type": "commercial",
+      "match_confidence": "high"
+    },
+    "coverage_determination": {
+      "decision": "APPROVED",
+      "applicable_coverage": "Own Vehicle Collision Coverage and Towing Coverage",
+      "deductible": "$500",
+      "coverage_limit": "$50,000 per incident",
+      "reasoning": "The claim involves collision damage to the policyholder's own vehicle caused by another driver who failed to yield. The policy explicitly covers own vehicle collision damage with a $50,000 per incident limit and a $500 deductible. The damage described (severe crumpling, bent axle, suspension issues) falls under collision coverage. Towing costs are also covered as per the policy. No exclusions such as racing, DUI, or intentional damage apply. The claim amount appears within coverage limits based on the damage description.",
+      "exclusions_triggered": [],
+      "recommendations": "Proceed with full assessment of repair costs and towing reimbursement. Verify final repair estimates to ensure they remain within the $50,000 collision limit. Confirm no other policy conditions affect coverage."
+    },
+    "full_policy_result": {
+      "policy_match": {
+        "policy_number": "COMM-AUTO-001",
+        "policy_name": "Commercial Auto Insurance",
+        "policy_type": "commercial",
+        "match_confidence": "high"
+      },
+      "coverage_summary": {
+        "covers_own_vehicle_collision": true,
+        "covers_own_vehicle_comprehensive": true,
+        "covers_liability_bodily_injury": true,
+        "covers_liability_property_damage": true,
+        "covers_medical_payments": true,
+        "covers_uninsured_motorist": true,
+        "covers_rental_car": false,
+        "covers_roadside_assistance": false,
+        "covers_towing": true
+      },
+      "limits": {
+        "collision_limit": "$50,000 per incident",
+        "comprehensive_limit": "$50,000 per incident",
+        "bodily_injury_per_person": "$100,000",
+        "bodily_injury_per_accident": "$300,000",
+        "property_damage_per_accident": "$100,000",
+        "medical_payments_per_person": "$10,000"
+      },
+      "deductibles": {
+        "collision_deductible": "$500",
+        "comprehensive_deductible": "$250"
+      },
+      "key_exclusions": [
+        "Racing or competitive driving events",
+        "Personal use outside business operations",
+        "Intentional damage",
+        "Damage while driving under the influence"
+      ],
+      "own_vehicle_damage_covered": true,
+      "notes": "Commercial auto policy with collision and comprehensive coverage for business vehicles.",
+      "status": "success",
+      "source": "fallback_mapping",
+      "timestamp": "2026-03-27T00:17:56.816031"
+    },
+    "full_validation_result": {
+      "coverage_decision": "APPROVED",
+      "policy_type": "Commercial Auto Insurance",
+      "policy_number": "COMM-AUTO-001",
+      "applicable_coverage": "Own Vehicle Collision Coverage and Towing Coverage",
+      "deductible": "$500",
+      "coverage_limit": "$50,000 per incident",
+      "reasoning": "The claim involves collision damage to the policyholder's own vehicle caused by another driver who failed to yield. The policy explicitly covers own vehicle collision damage with a $50,000 per incident limit and a $500 deductible. The damage described (severe crumpling, bent axle, suspension issues) falls under collision coverage. Towing costs are also covered as per the policy. No exclusions such as racing, DUI, or intentional damage apply. The claim amount appears within coverage limits based on the damage description.",
+      "exclusions_checked": [
+        "Racing or competitive driving events",
+        "Personal use outside business operations",
+        "Intentional damage",
+        "Damage while driving under the influence"
+      ],
+      "exclusions_triggered": [],
+      "recommendations": "Proceed with full assessment of repair costs and towing reimbursement. Verify final repair estimates to ensure they remain within the $50,000 collision limit. Confirm no other policy conditions affect coverage.",
+      "confidence": "high",
+      "status": "success",
+      "timestamp": "2026-03-27T00:18:04.216437",
+      "claim_summary": {
+        "policy_number": "COMM-AUTO-001",
+        "policy_holder_name": "Christopher J. Ryan",
+        "vehicle_year_make_model": "2016 Toyota Corolla",
+        "vehicle_color": "Black",
+        "vehicle_vin": "2T1BURHE1GC123905",
+        "incident_date": "July 19, 2025",
+        "incident_time": "2:50 PM",
+        "incident_location": "Intersection of Karl Road & Bethel Road, Columbus, OH 43214",
+        "incident_description": "Driving eastbound on Bethel Road, entered intersection at Karl Road. Gray pickup truck traveling northbound failed to yield while making left turn and struck rear driver's side of vehicle. Force of impact spun car, causing extensive damage to left rear panel and bumper. Other driver remained at scene and called local police.",
+        "damage_description": "Severe crumpling and denting of left rear quarter panel and bumper; rear driver's side taillight shattered; rear door and trunk slightly misaligned, trunk latch affected; rear wheel on driver's side bent, suspected axle damage; scrapes and paint transfer along left side; possible undercarriage and suspension issues; vehicle not safe to drive, towed from scene",
+        "claim_request": "Full assessment and coverage for all necessary body, mechanical, and suspension repairs, plus reimbursement for towing costs",
+        "weather_conditions": "Clear, dry pavement"
+      }
+    },
+    "workflow_timestamp": "2026-03-27T00:18:04.216472"
+  }
+]

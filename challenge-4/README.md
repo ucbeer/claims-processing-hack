@@ -233,6 +233,21 @@ echo "API URL: https://$APP_URL"
 curl https://$APP_URL/health
 
 # Test claim processing
+
+##ez már hibát írt, jogot kellett adni a foundrynál:
+#Selected role
+#Cognitive Services Data Contributor (Preview)
+#Assign access to
+#User, group, or service principal
+#Managed identity
+#Members
+#Select members
+#Name
+#Object ID
+#Type
+#claims-processing-api
+#a38a4741-7ffe-4ce9-badf-635e6556bfad
+#Container App
 curl -X POST https://$APP_URL/process-claim/upload \
   -F "file=@../challenge-0/data/statements/crash1_front.jpeg" \
   | jq .

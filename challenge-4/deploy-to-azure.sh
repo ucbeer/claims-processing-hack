@@ -13,7 +13,7 @@ fi
 
 source ../.env
 
-# Save current directory and navigate to workspace root for Docker build
+# Save current directory and navigate to workspace root for podman build
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 WORKSPACE_ROOT="$( cd "$SCRIPT_DIR/.." && pwd )"
 
@@ -33,20 +33,22 @@ echo "   Container App Environment: $ENVIRONMENT_NAME"
 echo "   App Name: $APP_NAME"
 echo ""
 
-# Step 1: Build Docker image
-echo "🔨 Step 1: Building Docker image..."
+# Step 1: Build podman image
+echo "🔨 Step 1: Building podman image..."
 cd "$WORKSPACE_ROOT"
-docker build -f challenge-4/Dockerfile -t $IMAGE_NAME:$IMAGE_TAG .
+podman build -f challenge-4/Dockerfile -t $IMAGE_NAME:$IMAGE_TAG .
 cd "$SCRIPT_DIR"
 
 # Step 2: Login to ACR
 echo "🔐 Step 2: Logging in to Azure Container Registry..."
-az acr login --name $ACR_NAME
+# Get ACR login token and use podman login
+TOKEN=$(az acr login --name $ACR_NAME --expose-token --query accessToken -o tsv)
+podman login $ACR_NAME.azurecr.io --username 00000000-0000-0000-0000-000000000000 --password $TOKEN
 
 # Step 3: Tag and push image
 echo "📤 Step 3: Pushing image to ACR..."
-docker tag $IMAGE_NAME:$IMAGE_TAG $ACR_NAME.azurecr.io/$IMAGE_NAME:$IMAGE_TAG
-docker push $ACR_NAME.azurecr.io/$IMAGE_NAME:$IMAGE_TAG
+podman tag $IMAGE_NAME:$IMAGE_TAG $ACR_NAME.azurecr.io/$IMAGE_NAME:$IMAGE_TAG
+podman push $ACR_NAME.azurecr.io/$IMAGE_NAME:$IMAGE_TAG
 
 # Step 4: Verify Container App Environment exists (created in Challenge 0)
 echo "🏗️  Step 4: Verifying Container App Environment..."
